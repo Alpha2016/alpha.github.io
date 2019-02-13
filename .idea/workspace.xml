@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="383366fb-fbbb-4d60-a87b-ea54a19d5650" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-01-06-ReactiveCocoa-进阶.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-10-iOS-手势与变形.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-18-Xcode-Debug-大全.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-26-BYPhoneNumTF.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-26-JSON-转模型-For-YYModel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-10-Objective-C Runtime详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-15-iOS噪音计模型.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-18-Objective-C-Runtime-基本使用.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-28-Objective-C-RunLoop.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-01-快速添加圆角和描边.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-07-忽略-Xcode8-中的注释警告⚠️.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-13-定时器你真的会使用吗？.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-21-Objective-C-Category.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-26-ReactiveCocoa-基础.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-14-随便聊聊.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-15-Mac-文本转音频.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-22-Mac-文件的隐藏与显示.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-22-使用-.gitignore-忽略-git-仓库中的文件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-01-Xcode-控制台输出中文.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-06-Swift-代理模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-08-CocoaPods公有仓库的创建.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-10-CocoaPods私有仓库的创建.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-17-Mac终端(zsh)下用代码编辑器打开文件或目录.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-23-AsyncDisplayKit-2.0-教程：入门「译」.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-30-Swift 3.1-的新变化「译」.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-04-07-强化-Swift-中的-print.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-04-13-CocoaPods-安装和使用.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-04-20-iOS自动打包.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-04-28-RVM-使用指南.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-03-Swift-的懒加载和计算型属性.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-04-R.swift-的使用.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-05-在-Swift-中使用-IBInspectable.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-06-19-快速配置zsh.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-04-Xcode9-无线调试功能.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-10-「体能训练理论」之功能性.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-10-「体能训练理论」之动力链.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-10-「体能训练理论」之金字塔.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-19-Swift的HMAC和SHA1加密.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-24-iTunes-Connect-构建版本不显示.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-11-Swift-4-新特性.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-04-GCD-在-Swift-中的用法.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-19-为博客添加-Gitalk-评论插件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-26-从一道网易面试题浅谈-Tagged-Pointer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-2-9-Mac快速调出终端.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-3-07-文件目录树状(tree)显示.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-04-柔术最大的谎言「译」.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-05-05-Xcode命令行工具管理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-06-05-5分钟带你看完-WWDC-2018.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/404-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/404-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/about-BY-gentle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-2015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-BJJ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-YesOrNo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-alibaba.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-android.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-coffee.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-cook.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-debug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-desk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-digital-native.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-e2e-ux.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-github-cup.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-hacker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-iWatch.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-ios10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-ios9-web.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-ioses.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-js-version.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-keybord.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-kuaidi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-map.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-miui-ux.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-miui6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-mma-0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-mma-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-mma-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-mma-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-mma-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-mma-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-mma-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-os-metro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-re-vs-ng2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-rwd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-swift.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-swift2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-universe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/post-bg-unix-linux.jpg" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/head.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-02-15-Git指令整理.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="285">
+                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1876">
+              <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/404.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>post-bg-mma-0</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/about.html" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-219" />
+    <option name="y" value="58" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="alpha2016.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alpha2016.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alpha2016.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alpha2016.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alpha2016.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alpha2016.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alpha2016.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alpha2016.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alpha2016.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alpha2016.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="383366fb-fbbb-4d60-a87b-ea54a19d5650" name="默认更改列表" comment="" />
+      <created>1550025791300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550025791300</updated>
+      <workItem from="1550025792674" duration="975000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="975000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Grunt " side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17217484" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-11-28-Objective-C-RunLoop.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1235" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-04-Hello-2017.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-14-随便聊聊.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-22-使用-.gitignore-忽略-git-仓库中的文件.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-06-19-快速配置zsh.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-07-10-「体能训练理论」之功能性.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-2348" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-07-10-「体能训练理论」之金字塔.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/avatar_m.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/avatar_g.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/avatar-by.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/apple-touch-icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/about-BY-gentle.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/404-bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-16-Git-代码回滚.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="380">
+            <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-15-Git指令整理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1876">
+          <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
