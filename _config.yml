@@ -12,7 +12,7 @@ github_repo: "https://github.com/alpha2016/alpha.github.io.git" # you code repos
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "旧博客地址：http://river0314.lofter.com/ (被系统由于不存在的原因偶尔删除)。 滑稽点!"
+sidebar-about-description: "旧博客地址：http://river0314.lofter.com/ 滑稽点!"
 sidebar-avatar: /img/about-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
