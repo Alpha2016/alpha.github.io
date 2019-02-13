@@ -19,7 +19,7 @@ description: "Excited!"
         </div>
     </a>
     <p class="post-meta">
-        author: {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} {{ post.date | date: "%Y %m %-d" }}
+        author: {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} date: {{ post.date | date: "%Y-%m-%d" }}
     </p>
 </div>
 <hr>
