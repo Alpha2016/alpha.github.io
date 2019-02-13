@@ -76,6 +76,10 @@ friends: [
     {
         title: "Lofter",
         href: "http://river0314.lofter.com"
+    },
+    {
+      title: "Laravel China",
+      href: "https://learnku.com/laravel"
     }
 ]
 
