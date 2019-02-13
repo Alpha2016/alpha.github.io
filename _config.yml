@@ -1,9 +1,9 @@
 # Site settings
-title: hxd 的博客
-SEOTitle: hxd 的博客
+title: alpha 的博客
+SEOTitle: 何晓东的博客 | alpha blog
 header-img: img/post-bg-desk.jpg
-email: limbo0720@outlook.com
-description: "滑稽点"
+email: Limbo0720@outlook.com
+description: "滑稽点,何晓东博客,php,mysql,linux"
 keyword: "PHP,MySQL,Linux"
 url: "http://alpha2016.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
