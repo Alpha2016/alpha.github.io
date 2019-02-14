@@ -31,3 +31,4 @@ tags:
 1. [Mdn web doc](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API "Service Worker")
 2. [Google developer doc](https://developers.google.com/web/fundamentals/primers/service-workers/ "Service Worker")
 3. [掘金文章](https://juejin.im/post/5b06a7b3f265da0dd8567513 "Service Worker")
+4. [Laras 百度实践教程](https://lavas.baidu.com/pwa/offline-and-cache-loading/service-worker/service-worker-debug "Service Worker")
