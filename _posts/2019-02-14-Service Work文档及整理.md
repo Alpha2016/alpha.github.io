@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Service Worker 文档及整理
-subtitle:   Service Worker笔记，前端优化
+subtitle:   Service Worker笔记，前端优化，浏览器缓存行为
 date:       2019-02-14
 author:     he xiaodong
 header-img: img/default-post-bg.jpg
@@ -24,8 +24,13 @@ tags:
 * 后台服务钩子
 * 自定义模板用于特定URL模式
 * 性能增强，比如预取用户可能需要的资源，比如相册中的后面数张图片
+
+Service Worker 生命周期为：
+![Worker lifecycle](https://mdn.mozillademos.org/files/12636/sw-lifecycle.png "Service Worker")
    
-&ensp;&ensp;目前看用以提前下载静态资源和缓存方面的应用比较多，可以算是 CDN 优化之外的一个手段。更多具体使用请参考文档，非常详细，目前浏览器的支持正在完善中
+&ensp;&ensp;目前看用以提前下载静态资源和缓存方面的应用比较多，可以算是 CDN 优化之外的一个手段。
+
+更多具体使用请参考文档，非常详细，目前浏览器的支持正在完善中
 
 参考链接：
 1. [Mdn web doc](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API "Service Worker")
