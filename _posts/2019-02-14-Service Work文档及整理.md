@@ -28,7 +28,7 @@ tags:
 Service Worker 生命周期为：
 ![Worker lifecycle](https://mdn.mozillademos.org/files/12636/sw-lifecycle.png "Service Worker")
    
-&ensp;&ensp;目前看用以提前下载静态资源和缓存方面的应用比较多，可以算是 CDN 优化之外的一个手段。
+目前看用以提前下载静态资源和缓存方面的应用比较多，可以算是 CDN 优化之外的一个手段。
 
 更多具体使用请参考文档，非常详细，目前浏览器的支持正在完善中
 
