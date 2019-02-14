@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!-- 基于ci3.0框架建设 Welcome to CodeIgniter3.0-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta name="keywords" content="网址导航，最简洁的网址导航"/>
+    <meta name="description" content="网址导航，最简洁的导航主页，乔迁新居" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <title>笨拙网址导航</title>
+
+    <style type="text/css">
+
+        ::selection { background-color: #E13300; color: white; }
+        ::-moz-selection { background-color: #E13300; color: white; }
+
+        body {
+            background-color: #fff;
+            margin: 1px 5% 0 5%;
+            font: 13px/20px normal Helvetica, Arial, sans-serif;
+            color: #4F5155;
+        }
+
+        a {
+            color: #003399;
+            background-color: transparent;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        h1 {
+            color: #444;
+            background-color: transparent;
+            border-bottom: 1px solid #D0D0D0;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0 0 1px 0;
+            padding: 1px 1px 1px 10px;
+            line-height: 32px;
+            font-family: 微软雅黑;
+        }
+
+        code {
+            /*font-family: Consolas, Monaco, Courier New, Courier, monospace;*/
+            font-family: 微软雅黑;
+            font-size: 13px;
+            background-color: #f9f9f9;
+            border: 1px solid #D0D0D0;
+            color: #002166;
+            display: block;
+            margin: -5px 0 7px 0;
+            padding: 5px 10px 5px 10px;
+        }
+
+        #body {
+            margin: 0 5px 0 5px;
+        }
+
+        p.footer {
+            text-align: right;
+            font-size: 11px;
+            border-top: 1px solid #D0D0D0;
+            line-height: 32px;
+            padding: 0 10px 0 10px;
+            margin: 20px 0 0 0;
+        }
+
+        #container {
+        // margin: 5px;
+        // border: 1px solid #D0D0D0;
+            box-shadow: 0 0 8px #D0D0D0;
+        }
+
+        .container{
+            width:90%;
+        }
+
+        ul{
+            list-style-type:none;
+            width: 100%;
+        }
+
+        ol{
+            font-size: 13px;
+            font-family: 微软雅黑;
+            float:left;
+        }
+
+        #ptitle{
+            float: right;
+            margin-right: 20px;
+            color:red;
+        }
+        .views_num{
+            color:red;
+        }
+        .recommend{
+            color:red;
+            font-weight: 500;
+        }
+        .top-recommend{
+            color:red;
+            font-weight: 500;
+            font-family: 幼圆;
+        }
+    </style>
+
+</head>
+<body>
+<script>
+    function showtime()
+    {
+        document.getElementById("time").innerHTML=new Date().toLocaleString();
+    }
+    window.setInterval("showtime()",1000);
+
+    function search(){
+        content = document.getElementById('content').value;
+        url = 'https://www.google.com/search?q='+content;
+        window.open(url);
+    }
+</script>
+
+
+<!-- jquery-->
+<script>
+    $(document).ready(function ()
+    {
+        // 设置样式
+        $("a").attr("target",'_blank');
+        $('ol').attr('class','col-xs-2 col-sm-2 col-md-2');
+        //注册表单的隐藏和显示
+        $('.form-div').hide();
+        $('#reg').click(function() {
+            $('.form-div').toggle();
+        });
+
+        //按下enter进行搜索
+        $("#search").keydown(function(e){
+            var e = e || event,
+                keycode = e.which || e.keyCode;
+            if (keycode==13) {
+                $("#do_search").trigger("click");
+            }
+        });
+    });
+</script>
+<div id="container" class="container">
+    <h1><span id='time'></span>&nbsp;&nbsp;&nbsp;
+        <span>天气应当去外面感受</span>
+
+        <span id = 'ptitle'>
+	Stay Simple</span>
+    </h1>
+    <div id="body">
+        <div id = 'search' style="height:10px;margin-top:5px;margin-bottom: 17px;">
+
+            <div class="form-group" >
+                <input type="text" id="content" style="width:70%;" class="form-control col-sm-8 col-xs-6">
+                &nbsp;&nbsp;
+                <input type="submit" value="Google Search" onclick="search()" id ="do_search" class="btn btn-success col-sm-2 col-xs-3" />
+            </div>
+        </div><br />
+
+        <code>常用门户</code>
+        <div style="clear:both;">
+            <ul class="row">
+                <ol> <a href = 'http://www.sina.com' > 新浪 </a> </ol>
+                <ol> <a href = 'http://www.163.com' > 网易 </a> </ol>
+                <ol> <a href = 'http://www.qq.com' > 腾讯 </a> </ol>
+                <ol> <a href = 'http://www.sohu.com' > 搜狐 </a> </ol>
+                <ol> <a href = 'http://www.bing.com' class="recommend"> bing </a> </ol>
+                <ol> <a href = 'http://www.baidu.com' > 百度 </a> </ol>
+            </ul>
+        </div>
+
+        <code>社交</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://i.qq.com/' > QQ空间 </a> </ol>
+                <ol> <a href = 'http://weibo.com' > 新浪微博 </a> </ol>
+                <ol> <a href = 'http://tieba.baidu.com/' > 百度贴吧 </a> </ol>
+                <ol> <a href = 'http://www.renren.com' > 人人网 </a> </ol>
+                <ol> <a href = 'https://wx.qq.com/' > 微信网页版 </a> </ol>
+                <ol> <a href = 'http://www.baihe.com/' > 百合网 </a> </ol>
+            </ul>
+            <ul class='row'>
+                <ol> <a href = 'http://www.mop.com/' > 猫扑 </a> </ol>
+                <ol> <a href = 'http://www.tianya.cn/' > 天涯 </a> </ol>
+                <ol> <a href = 'https://www.douban.com/' > 豆瓣 </a> </ol>
+                <ol> <a href = 'https://www.zhihu.com/' class="recommend"> 知乎 </a> </ol>
+                <ol></ol>
+                <ol></ol>
+            </ul>
+        </div>
+
+        <code>购物</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://www.taobao.com' > 淘宝网 </a> - <a href = 'http://www.tmall.com' > 天猫 </a> </ol>
+                <ol> <a href = 'https://www.kaola.com/' > 网易考拉 </a> </ol>
+                <ol> <a href = 'http://www.jd.com' > 京东 </a> </ol>
+                <ol> <a href = 'http://z.cn' class="recommend">亚马逊 </a> </ol>
+                <ol> <a href = 'http://www.yhd.com/' > 1号店 </a> </ol>
+                <ol> <a href = 'http://www.dangdang.com' > 当当网 </a> </ol>
+                <ol> <a href = 'http://www.nuomi.com/' > 糯米 </a> </ol>
+                <ol> <a href = 'http://www.meituan.com' > 美团 </a> </ol>
+                <ol> <a href = 'http://www.gome.com.cn/' > 国美 </a> </ol>
+                <ol> <a href = 'http://www.vancl.com/' > 凡客 </a> </ol>
+                <ol> <a href = 'http://www.jumei.com' > 聚美优品 </a> </ol>
+                <ol> <a href = 'http://www.suning.com' > 苏宁 </a> </ol>
+            </ul>
+        </div>
+
+        <code>音乐</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://music.baidu.com/' > 百度音乐 </a> </ol>
+                <ol> <a href = 'http://y.qq.com/' class="recommend"> QQ音乐 </a> </ol>
+                <ol> <a href = 'http://music.163.com/' > 网易云音乐 </a> </ol>
+                <ol> <a href = 'http://www.kuwo.cn/' > 酷我音乐 </a> </ol>
+                <ol> <a href = 'http://www.kugou.com/' > 酷狗音乐 </a> </ol>
+                <ol> <a href = 'http://www.xiami.com/' > 虾米音乐 </a> </ol>
+                <ol> <a href = 'http://douban.fm/' > 豆瓣FM </a> </ol>
+                <ol> <a href = 'http://www.yinyuetai.com/' > 音悦台 </a> </ol>
+                <ol> <a href = 'http://www.luoo.net/' class="recommend"> 落网 </a> </ol>
+                <ol> <a href = 'https://www.alibabaplanet.com/' > 天天动听 </a> </ol>
+                <ol></ol>
+                <ol></ol>
+            </ul>
+        </div>
+
+        <code>视频</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://www.acfun.tv/' > A站 </a> </ol>
+                <ol> <a href = 'http://www.bilibili.com/' > B站 </a> </ol>
+                <ol> <a href = 'http://tv.sohu.com/' > 搜狐视频 </a> </ol>
+                <ol> <a href = 'http://v.qq.com/' class="recommend" > 腾讯视频 </a> </ol>
+                <ol> <a href = 'http://www.iqiyi.com/' > 爱奇艺 </a> </ol>
+                <ol> <a href = 'http://rrmj.tv/' > 人人影视 </a> </ol>
+                <ol> <a href = 'http://www.ttmeiju.com/' > 天天美剧 </a> </ol>
+                <ol> <a href = 'http://www.youku.com/' > 优酷土豆 </a> </ol>
+                <ol> <a href = 'http://www.kankan.com/' > 迅雷看看 </a> </ol>
+                <ol> <a href = 'http://www.pptv.com/' > PPTV </a> </ol>
+                <ol> <a href = 'http://www.letv.com/' > 乐视网 </a> </ol>
+                <ol> <a href = 'http://www.56.com/' > 56 </a> </ol>
+                <ol></ol>
+            </ul>
+        </div>
+
+        <code>新闻</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://news.baidu.com/' > 百度新闻 </a> </ol>
+                <ol> <a href = 'http://www.ifeng.com/' > 鳳凰網 </a> </ol>
+                <ol> <a href = 'http://time.com/' > 时代周刊 </a> </ol>
+                <ol> <a href = 'http://www.infzm.com/' class = 'recommend' > 南方周末 </a> </ol>
+                <ol> <a href = 'http://www.aol.com/' > 美国在线 </a> </ol>
+                <ol> <a href = 'http://www.chinadaily.com.cn/' > China Daily </a></ol>
+                <ol> <a href = 'https://www.toutiao.com/' class = 'recommend'> 今日头条 </a> </ol>
+                <ol> <a href = 'http://www.cankaoxiaoxi.com/' > 参考消息 </a> </ol>
+                <ol> <a href = 'http://www.thepaper.cn/' > 澎湃网 </a> </ol>
+                <ol> <a href = 'http://www.huanqiu.com/' > 环球网 </a></ol>
+                <ol> <a href = 'http://www.cctv.com/' > 央视网 </a> </ol>
+                <ol> <a href = 'http://www.people.com.cn/' > 人民网 </a> </ol>
+            </ul>
+        </div>
+
+        <code>体育</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://sports.sina.com.cn/' > 新浪体育 </a> </ol>
+                <ol> <a href = 'http://sports.163.com/' > 网易体育 </a> </ol>
+                <ol> <a href = 'http://sports.sohu.com/' > 搜狐体育 </a> </ol>
+                <ol> <a href = 'http://sports.cntv.cn/' > 央视体育 </a> </ol>
+                <ol> <a href = 'http://bbs.hupu.com/' class = 'recommend'> 虎扑体育 </a> </ol>
+                <ol> <a href = 'http://www.zhibo8.cc/' > 直播吧 </a> </ol>
+                <ol> <a href = 'https://www.dongqiudi.com/' > 懂球帝 </a> </ol>
+                <ol> <a href = 'http://www.espn.com/' > ESPN </a> </ol>
+                <ol> <a href = 'http://www.nbcsports.com/' > NBC </a> </ol>
+                <ol> <a href = 'https://www.cbssports.com/' > CBS </a> </ol>
+                <ol> <a href = 'https://www.si.com/' > 体育画报 </a> </ol>
+            </ul>
+        </div>
+        <!--彩票为保留栏目-->
+        <code>经济</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://www.economist.com/' class = 'recommend' > 经济学人 </a>(404) </ol>
+                <ol> <a href = 'http://www.ce.cn/' > 中国经济网 </a> </ol>
+                <ol> <a href = 'http://www.nbd.com.cn/' > 每日经济新闻 </a> </ol>
+                <ol> <a href = 'http://finance.ifeng.com/' > 凤凰财经 </a> </ol>
+                <ol> <a href = 'http://www.eeo.com.cn/' > 经济观察 </a> </ol>
+                <ol> <a href = 'http://wallstreetcn.com/'> 华尔街见闻 </a></ol>
+            </ul>
+        </div>
+
+        <code>旅行</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol><a href = 'http://www.ctrip.com/' > 携程网 </a> </ol>
+                <ol><a href = 'https://www.qunar.com' class = 'recommend' > 去哪儿 </a> </ol>
+                <ol><a href = 'http://www.mafengwo.cn' > 蚂蜂窝 </a> </ol>
+                <ol><a href = 'http://chanyouji.com' > 蝉游记 </a> </ol>
+                <ol><a href = 'http://www.elong.com' > 艺龙 </a> </ol>
+                <ol><a href = 'https://www.ly.com' > 同程网 </a> </ol>
+                <ol><a href = 'http://www.qyer.com/' > 穷游网 </a> </ol>
+                <ol><a href = 'http://www.lvmama.com' > 驴妈妈 </a> </ol>
+                <ol><a href = 'http://www.tuniu.com' > 途牛 </a> </ol>
+                <ol><a href = 'http://www.mangocity.com' > 芒果网 </a> </ol>
+                <ol><a href = 'http://www.fliggy.com' > 飞猪 </a> </ol>
+            </ul>
+        </div>
+
+        <code>汽车</code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'http://www.autohome.com.cn' class = 'recommend' > 汽车之家 </a> </ol>
+                <ol> <a href = 'http://www.pcauto.com.cn' > 太平洋汽车 </a> </ol>
+                <ol> <a href = 'http://www.bitauto.com' > 易车网 </a> </ol>
+                <ol> <a href = 'http://auto.sina.com.cn' > 新浪汽车 </a> </ol>
+                <ol> <a href = 'http://www.xcar.com.cn' > 爱卡汽车 </a> </ol>
+                <ol> <a href = 'http://www.cheyun.com' > 车云网 </a> </ol>
+                <ol> <a href = 'http://www.autofan.com.cn' > 汽车之友 </a> </ol>
+                <ol> <a href = 'http://www.webcars.com.cn' > 万车网 </a> </ol>
+                <ol> <a href = 'http://www.feelcars.com' > 汽车探索 </a> </ol>
+                <ol> <a href = 'http://auto.163.com' > 网易汽车 </a> </ol>
+                <ol> <a href = 'http://auto.ifeng.com' > 凤凰汽车 </a> </ol>
+            </ul>
+        </div>
+
+        <code>GraveStone </code>
+        <div style="clear:both;">
+            <ul class='row'>
+                <ol> <a href = 'https://www.google.com.hk/' class = 'recommend'> Google </a> </ol>
+                <ol> <a href = 'https://twitter.com/' > Twitter </a> </ol>
+                <ol> <a href = 'https://www.facebook.com/' > Facebook </a> </ol>
+                <ol> <a href = 'https://zh.wikipedia.org/wiki/Wikipedia:首页' > Wiki </a> </ol>
+                <ol> <a href = 'https://www.youtube.com/' > Youtube </a> </ol>
+            </ul>
+        </div>
+    </div>
+    <p class="footer">
+        生命在他里头，这生命就是人的光。光照在黑暗里，黑暗却不接受光。（《新约·约翰福音》第1章）  
+    </p>
+</div>
+</body>
+</html>
