@@ -36,7 +36,7 @@ $server->on('workerStart', function ($server, $workerId) {
 
         // 测试为给所有的 fd 推消息
         foreach ($server->connections as $fd) {
-            $server->push($fd, 'redis 的 ' . $message[0] . ' 队列发生消息:' . $message[1]);
+            $server->push($fd, 'redis 的 ' . $message[0] . ' 队列发送消息:' . $message[1]);
         }
     }
 });
