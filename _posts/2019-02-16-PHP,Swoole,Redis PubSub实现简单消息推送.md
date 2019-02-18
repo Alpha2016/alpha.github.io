@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      PHP,Swoole,Redis实现简单消息推送
-subtitle:   PHP,Swoole,Redis实现简单消息推送
+title:      PHP,Swoole,Redis PubSub实现简单消息推送
+subtitle:   PHP,Swoole,Redis PubSub实现简单消息推送
 date:       2019-02-16
 author:     he xiaodong
 header-img: img/default-post-bg.jpg
