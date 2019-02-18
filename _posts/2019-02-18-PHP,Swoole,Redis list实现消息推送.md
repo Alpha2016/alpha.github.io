@@ -13,7 +13,7 @@ tags:
     - Redis List
     - 消息推送
 ---
-**主要是利用 Swoole 的 Redis 协程属性及 Redis list 的阻塞读，在list有新消息时， swoole redis 能获取到消息，推送到链接的 fd**
+**主要是利用 Swoole 的 Redis 协程属性及 Redis list 的阻塞读，当 list 有新消息时， swoole redis 能获取到消息，推送给链接的 fd**
 
 *swoole.html*
 用户端代码没有变，还是原来的聊天室页面，具体参见上篇文章
