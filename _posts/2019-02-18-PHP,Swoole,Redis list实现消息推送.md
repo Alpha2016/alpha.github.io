@@ -28,14 +28,13 @@ $server->on('workerStart', function ($server, $workerId) {
     $redis->connect('127.0.0.1', 6379);
     while (true) {
         // brpop 第二个参数 50 表示超时（阻塞等待）时间, blpop 同理，详情建议读文档,对应的 redis 操作是 rpush/lpush key content
-        
+
         if (($message = $redis->brpop('message', 50)) === null) {
             sleep(1);
             continue;
         }
         // var_dump($message);  结果为数组
 
-        // 测试为给所有的 fd 推消息
         foreach ($server->connections as $fd) {
             $server->push($fd, 'redis 的 ' . $message[0] . ' 队列发送消息:' . $message[1]);
         }
