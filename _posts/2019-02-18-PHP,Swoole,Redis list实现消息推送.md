@@ -60,6 +60,6 @@ $server->start();
 
 ![swoole redis list 效果](https://alpha2016.github.io/img/2019-02-18-swoole-redis-list-demo.jpg "swoole redis list 效果")
 
-> 进阶思考：以上的示例为向所有在线的 fd 推消息，如果一个用户登录之后，在 redis 的 hash 中报错用户 id 对应的 fd，而 list 的名称为 user_1_messages, 这样的名称，中间为用户具体 id, 则用户可以消费自己的队列数据，通知在 hash 中查找用户 id 对应的 fd值，向对应的 fd 推消息。算是**一个较完整的简单消息消费系统了**。
+> 进阶思考：以上的示例为向所有在线的 fd 推消息，如果一个用户登录之后，在 redis 的 hash 中保存用户 id 对应的 fd，而 list 的名称为 user_1_messages, 这样的名称，中间为用户具体 id, 则用户可以消费自己的队列数据，通知在 hash 中查找用户 id 对应的 fd 值，向对应的 fd 推消息。这样就算是**一个较完整的简单消息消费系统了**，有时间在写具体代码。
 
 **tips: 一次性推送多条数据，例如 `rpush message content1 content2 content3`, brpop 的顺序为 `content3 content2 content1`,则推送顺序也为 3 2 1**
