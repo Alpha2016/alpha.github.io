@@ -42,15 +42,16 @@ $server->on('workerStart', function ($server, $workerId) {
 });
 
 $server->on('open', function ($server, $request) {
-
+    $server->push($request->fd, "hello;\n");
 });
 
-$server->on('message', function (swoole_websocket_server $server, $frame) {
-    $server->push($frame->fd, "hello");
+$server->on('message', function (swoole_websocket_server $server, $request) {
+    $server->push($request->fd, "hello");
 });
 
-$server->on('close', function ($serv, $fd) {
-
+$server->on('close', function ($server, $fd) {
+    echo "client-{$fd} is closed\n";
+    $server->close($fd);   // 销毁fd链接信息
 });
 
 $server->start();
