@@ -51,7 +51,7 @@ $server->on('message', function (swoole_websocket_server $server, $request) {
 
 $server->on('close', function ($server, $fd) {
     echo "client-{$fd} is closed\n";
-    $server->close($fd);   // 销毁fd链接信息
+    $server->close($fd);
 });
 
 $server->start();
