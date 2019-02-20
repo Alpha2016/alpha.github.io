@@ -106,6 +106,7 @@ $server->start();
 ```
 
 在 `/var/www` 目录下，执行 `php swoole.php` 启动 swoole 进程，然后通过浏览器访问 `localhost://swoole.html` ，就可以看到聊天室页面，新起终端，使用 `redis-cli` 命令进入redis, 可以通过 `pubsub channels` 命令查看当前的频道，就可以看到 message 频道，然后 `publish message 消息体`, 在 message 频道发布一条消息，在聊天室页面就可以看到消息，效果如同：
+
 ![swoole redis pubsub 效果](https://alpha2016.github.io/img/2019-02-15-php-swoole-redis-demo.jpg "swoole redis pubsub 效果")
 
 > 这个有一些缺憾是：redis pubsub 自身的缺憾，消息不能持久化，重启redis消息都会丢失。swoole 创建的频道在 swoole 服务退出的时候，频道也会关闭，消息丢失。所以适合搭一个简单给所有在线的用户推消息的体系，对消息必达的要求不高。
