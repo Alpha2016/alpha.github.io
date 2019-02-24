@@ -130,4 +130,4 @@ $server->start();
 1. [swoole task文档](https://wiki.swoole.com/wiki/page/54.html "swoole task 文档")
 2. [memory 文章](https://www.im050.com/posts/380 "memory swoole task 文章")
 
-**期间 memory 博客作者及其他大佬提供了思路，才得以完成，特此感谢，原创文章**
+**期间 memory 博客作者及其他大佬提供了思路，才得以完成，特此感谢，©原创文章**
