@@ -101,10 +101,12 @@ $server->on('workerStart', function ($server, $workerId) {
 
 $server->on('open', function ($server, $request) {
     // nothing
+    
 });
 
 $server->on('message', function (swoole_websocket_server $server, $request) {
     // nothing
+    
 });
 
 $server->on('close', function ($server, $fd) {
