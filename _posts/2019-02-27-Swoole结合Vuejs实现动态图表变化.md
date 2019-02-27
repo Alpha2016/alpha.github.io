@@ -122,7 +122,7 @@ $server->start();
 
 ![Swoole结合Vuejs 实现动态图表变化](https://alpha2016.github.io/img/2019-02-27-swoole-charts-demo.jpg "vue swoole 动态图表")
 
-执行效果如常：`php swoole-charts.php` 启动服务，开始监听 redis 的 data 队列，然后用户访问到 `http://localhost/swoole-charts.html` 页面，最开始加载在页面中的数据，然后新起终端，输入 `redis-cli` 打开 redis，`rpush data '{"日期":"1月7日","销售额":358}'` ... 等，新增的数据推送到 data 队列，然后 swoole 负责读取和推送，vuejs 负责根据数据变化，动态渲染图表
+执行过程如常：`php swoole-charts.php` 启动服务，开始监听 redis 的 data 队列，然后用户访问到 `http://localhost/swoole-charts.html` 页面，最开始加载在页面中的数据，然后新起终端，输入 `redis-cli` 打开 redis，`rpush data '{"日期":"1月7日","销售额":358}'` ... 等，新增的数据推送到 data 队列，然后 swoole 负责读取和推送，vuejs 负责根据数据变化，动态渲染图表
 
 **©原创文章，如有帮助，多谢打赏**
 ![支付宝](https://alpha2016.github.io/img/alipay.jpg "支付宝帐号")
