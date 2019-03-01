@@ -22,16 +22,17 @@ tags:
 
 ```php
 <?php
-$begin = microtime( true );
-$fp = fopen( 'aaa.sql', "r" );
-while( false !== ( $ch = fgetc( $fp ) ) ){
+$begin = microtime(true);
+$fp = fopen('aaa.sql', "r");
+while(false !== ($ch = fgetc($fp))) {
   // 打开注释后屏显字符会严重拖慢程序速度！也就是说程序运行速度可能远远超出屏幕显示速度
+  
   // echo $char.PHP_EOL;
   
 }
-fclose( $fp );
-$end = microtime( true );
-echo "cost : ".( $end - $begin ).PHP_EOL;
+fclose($fp);
+$end = microtime(true);
+echo "cost : " . ($end - $begin) . PHP_EOL;
 
 // 结果 22s+
 ```
@@ -46,12 +47,12 @@ while( false !== ( $buffer = fgets( $fp, 4096 ) ) ){
   // echo $buffer.PHP_EOL;
   
 }
-if( !feof( $fp ) ){
+if (!feof($fp)) {
   throw new Exception('... ...');
 }
-fclose( $fp );
-$end = microtime( true );
-echo "cost : ".( $end - $begin ).' sec'.PHP_EOL;
+fclose($fp);
+$end = microtime(true);
+echo "cost : " . ($end - $begin) . ' sec' . PHP_EOL;
 
 // 0.314s + 
 ```
@@ -60,15 +61,16 @@ echo "cost : ".( $end - $begin ).' sec'.PHP_EOL;
 
 ```php
 <?php
-$begin = microtime( true );
-$fp = fopen( 'aaa.sql', 'r' );
-while( !feof( $fp ) ){
+$begin = microtime(true);
+$fp = fopen('aaa.sql', 'r');
+while(!feof($fp)) {
   // 如果你要使用echo，那么，你会很惨烈...
-  fread( $fp, 10240 );
+  
+  fread($fp, 10240);
 }
-fclose( $fp );
-$end = microtime( true );
-echo "cost : ".( $end - $begin ).' sec'.PHP_EOL;
+fclose($fp);
+$end = microtime(true);
+echo "cost : " . ($end - $begin) . ' sec' . PHP_EOL;
 exit;
 
 // 0.2s+
@@ -80,14 +82,15 @@ exit;
 <?php
 use Swoole\Async;
 
-$trunk_size = 1048576;
+$trunk_size = 10485760;
 $offset = 0;
 $begin = microtime( true );
 
 swoole_async_read("aaa.sql", function($fileName, $content) use ($begin) {
     // var_dump($fileName, strlen($content));
+    
     $end = microtime( true );
-    echo "cost : " . ( $end - $begin ).' sec'.PHP_EOL;
+    echo "cost : " . ($end - $begin).' sec'.PHP_EOL;
     return true;
 }, $trunk_size, $offset);
 
