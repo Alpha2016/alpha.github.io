@@ -80,7 +80,7 @@ exit;
 <?php
 use Swoole\Async;
 
-$trunk_size = 102400;
+$trunk_size = 1048576;
 $offset = 0;
 $begin = microtime( true );
 
@@ -91,10 +91,10 @@ swoole_async_read("aaa.sql", function($fileName, $content) use ($begin) {
     return true;
 }, $trunk_size, $offset);
 
-// 2s+
+// 0.086s+
 ```
 
-最终对比，分块读效率最高，能够自定义每次读取块的大小，在 memory_limit 之下，就不会产生问题，swoole 的异步读取底层应该也是分块读吧，没去看源码了，这几种方式都能实现有限内存内读取大文件，自行根据业务需求选择就行。**其他还有利用 yield 协程读取，这样读取时间不如分块读，但内存占用会很小**
+最终对比，Swoole 异步分块读效率最高，能够自定义每次读取块的大小，在 memory_limit 之下，就复合要求。这几种方式都能实现在有限内存内读取大文件，自行根据业务需求选择就行。**其他还有利用 yield 协程读取，这样读取时间不如分块读，但内存占用会很小**
 
 参考链接：
 1. [elarilty 文章](https://segmentfault.com/a/1190000017205171 "elarilty 文章")
