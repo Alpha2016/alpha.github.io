@@ -16,15 +16,17 @@ tags:
 
 &ensp;&ensp;Master-Worker是一种将串行任务并行化的方案，模式满足于可以将大任务划分为小任务的场景，是一种分而治之的设计理念。通过多线程或者多进程多机器的模式，可以将小任务处理分发给更多的CPU处理，降低单个CPU的计算量，通过并发/并行提高任务的完成速度，提高系统的性能。 同时，如果有需要，Master进程不需要等待所有子任务都完成计算，就可以根据已有的部分结果集计算最终结果集。<br />
 
+如图：
  ![Master Worker 模式](https://alpha2016.github.io/img/2019-03-02-master-worker-model.jpg "Master Worker 模式")
 
-工作线程回收需要满足三个条件：<br />
-1)  参数allowCoreThreadTimeOut为true
-2)  该线程在keepAliveTime时间内获取不到任务，即空闲这么长时间
-3)  当前线程池大小 > 核心线程池大小corePoolSize。
 
+工作线程回收需要满足三个条件：<br />
+1)  参数allowCoreThreadTimeOut为true<br />
+2)  该线程在keepAliveTime时间内获取不到任务，即空闲这么长时间<br />
+3)  当前线程池大小 > 核心线程池大小corePoolSize。<br />
 
 延伸阅读：
+
 1. [CSDN 文章 多线程之Master-Worker工作模式学习](https://blog.csdn.net/a347911/article/details/53421102 "多线程之Master-Worker工作模式学习")
 2. [掘金文章 理解JAVA线程池](https://juejin.im/entry/58fada5d570c350058d3aaad "深入理解JAVA线程池") 
 3. [sf文章 理解和使用线程池](https://segmentfault.com/a/1190000015808897 "理解和使用线程池") 
