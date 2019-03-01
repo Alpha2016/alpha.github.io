@@ -80,7 +80,7 @@ exit;
 <?php
 use Swoole\Async;
 
-$trunk_size = 10240;
+$trunk_size = 102400;
 $offset = 0;
 $begin = microtime( true );
 
