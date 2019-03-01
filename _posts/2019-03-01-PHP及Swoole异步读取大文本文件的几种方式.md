@@ -43,7 +43,7 @@ echo "cost : " . ($end - $begin) . PHP_EOL;
 <?php
 $begin = microtime( true );
 $fp = fopen( 'aaa.sql', 'r' );
-while( false !== ( $buffer = fgets( $fp, 4096 ) ) ){
+while(false !== ($buffer = fgets($fp, 4096))) {
   // echo $buffer.PHP_EOL;
   
 }
