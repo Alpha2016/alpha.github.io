@@ -111,15 +111,9 @@
     }
     window.setInterval("showtime()",1000);
 
-    function gsearch(){
+    function search(){
         content = document.getElementById('content').value;
         url = 'https://www.google.com/search?q='+content;
-        window.open(url);
-    }
-
-    function bsearch() {
-        content = document.getElementById('content').value;
-        url = 'https://www.baidu.com/search?q=' + content;
         window.open(url);
     }
 </script>
@@ -143,7 +137,7 @@
             var e = e || event,
                 keycode = e.which || e.keyCode;
             if (keycode == 13) {
-                $("#g-search").trigger("click");
+                $("#do_search").trigger("click");
             }
         });
     });
@@ -156,14 +150,11 @@
 	Stay Simple</span>
     </h1>
     <div id="body">
-        <div id = 'search' style="height:10px;margin-top:5px;margin-bottom: 17px;">
-
+        <div id="search" style="height:10px;margin-top:5px;margin-bottom: 17px;">
             <div class="form-group" >
                 <input type="text" id="content" style="width:70%;" class="form-control col-sm-8 col-xs-6">
                 &nbsp;&nbsp;
-                <input type="submit" value="Google Search" onclick="gsearch()" id ="g-search" class="btn btn-success col-sm-2 col-xs-3" />
-                &nbsp;&nbsp;
-                <input type="submit" value="百度搜索" onclick="bsearch()" id="b-search" class="btn btn-success col-sm-2 col-xs-3" />
+                <input type="submit" value="Google Search" onclick="search()" id ="do_search" class="btn btn-success col-sm-2 col-xs-3" />
             </div>
         </div><br />
 
