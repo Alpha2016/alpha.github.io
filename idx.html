@@ -67,14 +67,9 @@
             margin: 20px 0 0 0;
         }
 
-        #container {
-        // margin: 5px;
-        // border: 1px solid #D0D0D0;
-            box-shadow: 0 0 8px #D0D0D0;
-        }
-
         .container{
             width:90%;
+            box-shadow: 0 0 8px #D0D0D0;
         }
 
         ul{
@@ -116,9 +111,15 @@
     }
     window.setInterval("showtime()",1000);
 
-    function search(){
+    function gsearch(){
         content = document.getElementById('content').value;
         url = 'https://www.google.com/search?q='+content;
+        window.open(url);
+    }
+
+    function bsearch() {
+        content = document.getElementById('content').value;
+        url = 'https://www.baidu.com/search?q=' + content;
         window.open(url);
     }
 </script>
@@ -141,8 +142,8 @@
         $("#search").keydown(function(e){
             var e = e || event,
                 keycode = e.which || e.keyCode;
-            if (keycode==13) {
-                $("#do_search").trigger("click");
+            if (keycode == 13) {
+                $("#g-search").trigger("click");
             }
         });
     });
@@ -160,7 +161,9 @@
             <div class="form-group" >
                 <input type="text" id="content" style="width:70%;" class="form-control col-sm-8 col-xs-6">
                 &nbsp;&nbsp;
-                <input type="submit" value="Google Search" onclick="search()" id ="do_search" class="btn btn-success col-sm-2 col-xs-3" />
+                <input type="submit" value="Google Search" onclick="gsearch()" id ="g-search" class="btn btn-success col-sm-2 col-xs-3" />
+                &nbsp;&nbsp;
+                <input type="submit" value="百度搜索" onclick="bsearch()" id="b-search" class="btn btn-success col-sm-2 col-xs-3" />
             </div>
         </div><br />
 
