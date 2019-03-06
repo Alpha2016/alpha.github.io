@@ -17,7 +17,7 @@ Nginx 和 PHP 的关系：<br />
 
 #### Nginx 优化
 1. TCP 与 UNIX 套接字 <br />
-UNIX域套接字提供的性能略高于TCP套接字在回送接口上的性能（较少的数据复制，较少的上下文切换）。如果每个服务器需要支持超过1,000个连接，请使用TCP套接字 - 它们可以更好地扩展。
+UNIX 域套接字提供的性能略高于 TCP 套接字在回送接口上的性能（较少的数据复制，较少的上下文切换）。如果每个服务器需要支持超过 1000 个连接，请使用 TCP 套接字 - 它们可以更好地扩展。<br />
 ```text
 upstream backend 
 { 
@@ -32,7 +32,7 @@ upstream backend
 2. 调整 worker_processes 参数<br />
 现代硬件是多处理器，NGINX 可以利用多个物理或虚拟处理器。在大多数情况下，您的 Web 服务器计算机不会配置为处理多个工作负载（例如同时提供 Web 服务器和打印服务器的服务），因此您需要配置 NGINX 以使用所有可用的处理器，因为 NGINX 工作进程是不是多线程的。<br />
 将 nginx.conf 文件中的 worker_processes 设置为计算机所具有的核心数。<br />
-当你在它的时候，增加 worker_connections 的数量（每个核心应该处理多少个连接）并将 multi_accept 设置为 ON，如果你在 Linux 上则设置为 epoll：
+当你在它的时候，增加 worker_connections 的数量（每个核心应该处理多少个连接）并将 multi_accept 设置为 ON，如果你在 Linux 上则设置为 epoll：<br />
 ```text
 #我们有4个核心 
 worker_processes 4; 
