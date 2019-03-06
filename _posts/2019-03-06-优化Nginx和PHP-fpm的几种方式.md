@@ -17,8 +17,7 @@ Nginx 和 PHP 的关系：<br />
 
 #### Nginx 优化
 1. TCP 与 UNIX 套接字 <br />
-UNIX域套接字提供的性能略高于TCP套接字在回送接口上的性能（较少的数据复制，较少的上下文切换）。如果每个服务器需要支持超过1,000个连接，请使用TCP套接字 - 它们可以更好地扩展。<br />
-
+UNIX域套接字提供的性能略高于TCP套接字在回送接口上的性能（较少的数据复制，较少的上下文切换）。如果每个服务器需要支持超过1,000个连接，请使用TCP套接字 - 它们可以更好地扩展。
 ```text
 upstream backend 
 { 
@@ -33,8 +32,7 @@ upstream backend
 2. 调整 worker_processes 参数<br />
 现代硬件是多处理器，NGINX 可以利用多个物理或虚拟处理器。在大多数情况下，您的 Web 服务器计算机不会配置为处理多个工作负载（例如同时提供 Web 服务器和打印服务器的服务），因此您需要配置 NGINX 以使用所有可用的处理器，因为 NGINX 工作进程是不是多线程的。<br />
 将 nginx.conf 文件中的 worker_processes 设置为计算机所具有的核心数。<br />
-当你在它的时候，增加 worker_connections 的数量（每个核心应该处理多少个连接）并将 multi_accept 设置为 ON，如果你在 Linux 上则设置为 epoll：<br />
-
+当你在它的时候，增加 worker_connections 的数量（每个核心应该处理多少个连接）并将 multi_accept 设置为 ON，如果你在 Linux 上则设置为 epoll：
 ```text
 #我们有4个核心 
 worker_processes 4; 
@@ -106,13 +104,12 @@ server_names_hash_bucket_size 100;
 
 8. 负载均衡策略<br />
 Nginx 提供轮询（round robin）、用户 IP 哈希（client IP）和指定权重 3 种方式。<br />
-默认情况下，Nginx 会为你提供轮询作为负载均衡策略。但是这并不一定能够让你满意。比如，某一时段内的一连串访问都是由同一个用户 Michael 发起的，那么第一次 Michael 的请求可能是 backend2，而下一次是 backend3，然后是 backend1、backend2、backend3…… 在大多数应用场景中，这样并不高效。当然，也正因如此，Nginx 为你提供了一个按照 Michael、Jason、David 等等这些乱七八糟的用户的 IP 来 hash 的方式，这样每个 client 的访问请求都会被甩给同一个后端服务器。
-
+默认情况下，Nginx 会为你提供轮询作为负载均衡策略。但是这并不一定能够让你满意。比如，某一时段内的一连串访问都是由同一个用户 Michael 发起的，那么第一次 Michael 的请求可能是 backend2，而下一次是 backend3，然后是 backend1、backend2、backend3…… 在大多数应用场景中，这样并不高效。当然，也正因如此，Nginx 为你提供了一个按照 Michael、Jason、David 等等这些乱七八糟的用户的 IP 来 hash 的方式，这样每个 client 的访问请求都会被甩给同一个后端服务器。<br />
 ```text
 upstream backend {
   ip_hash;
-  server unix:/var/run/php5-fpm.sock1 weight=100 max_fails=5 fail_timeout=5; 
-  server unix:/var/run/php5-fpm.sock2 weight=100 max_fails=5 fail_timeout=5; 
+  server unix:/var/run/php7.2-fpm.sock1 weight=100 max_fails=5 fail_timeout=5; 
+  server unix:/var/run/php7.2-fpm.sock2 weight=100 max_fails=5 fail_timeout=5; 
 }
 ```
 
