@@ -20,12 +20,8 @@ Nginx 和 PHP 的关系：<br />
 UNIX 域套接字提供的性能略高于 TCP 套接字在回送接口上的性能（较少的数据复制，较少的上下文切换）。如果每个服务器需要支持超过 1000 个连接，请使用 TCP 套接字 - 它们可以更好地扩展。<br />
 ```text
 upstream backend 
-{ 
-  #UNIX domain sockets 
+{
   server unix:/var/run/fastcgi.sock; 
-
-  #TCP sockets 
-  #server 127.0.0.1:8080; 
 }
 ```
 
@@ -34,10 +30,8 @@ upstream backend
 将 nginx.conf 文件中的 worker_processes 设置为计算机所具有的核心数。<br />
 当你在它的时候，增加 worker_connections 的数量（每个核心应该处理多少个连接）并将 multi_accept 设置为 ON，如果你在 Linux 上则设置为 epoll：<br />
 ```text
-#我们有4个核心 
 worker_processes 4; 
 
-#每个 worker 链接
 { 
   worker_connections 1024; 
   multi_accept on; 
