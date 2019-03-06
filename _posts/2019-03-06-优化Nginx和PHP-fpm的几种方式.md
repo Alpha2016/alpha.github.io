@@ -132,7 +132,6 @@ pm.max_requests = 2000 #php-fpm子进程能处理的最大请求数。
 pm.process_idle_timeout = 10s
 request_terminate_timeout = 120
 ```
-
 pm = static，始终保持一个固定数量的子进程，这个数由 pm.max_children 定义，这种方式很不灵活，也通常不是默认的。<br />
 pm = dynamic，启动时会产生固定数量的子进程（由 pm.start_servers 控制）可以理解成最小子进程数，而最大子进程数则由 pm.max_children 去控制，子进程数会在最大和最小数范围中变化。闲置的子进程数还可以由另2个配置控制，分别是 pm.min_spare_servers 和 pm.max_spare_servers。如果闲置的子进程超出了pm.max_spare_servers，则会被杀掉。小于 pm.min_spare_servers 则会启动进程（注意，pm.max_spare_servers 应小于 pm.max_children）。<br />
 pm = ondemand，这种模式和 pm = dynamic 相反，把内存放在第一位，每个闲置进程在持续闲置了 pm.process_idle_timeout 秒后就会被杀掉，如果服务器长时间没有请求，就只会有一个 php-fpm 主进程。弊端是遇到高峰期或者如果 pm.process_idle_timeout 的值太短的话，容易出现 504 Gateway Time-out 错误，因此 pm = dynamic 和 pm = ondemand 谁更适合视实际情况而定。<br />
