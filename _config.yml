@@ -81,6 +81,14 @@ friends: [
     {
       title: "Laravel China",
       href: "https://learnku.com/laravel"
+    },
+    {
+      title: "周梦康博客",
+      href: "https://mengkang.net/"
+    },
+    {
+      title: "elarity sf专栏",
+      href: "https://segmentfault.com/blog/elarity"
     }
 ]
 
