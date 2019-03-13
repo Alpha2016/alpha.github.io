@@ -82,10 +82,13 @@ tags:
 大于或等于768字节的固定长度列被编码为可变长度字段，可以在页外存储。例如，`CHAR(255)`如果字符集的最大字节长度大于3，如果列是 `utf8mb4` 字符类型时可以超过768字节。
 
 ##### COMPACT 行格式存储特性图解
+MySQL InnoDB COMPAT 行格式结构<br />
 ![MySQL InnoDB COMPAT 行格式结构](https://alpha2016.github.io/img/2019-03-13-mysql-innodb-compact-format.jpg "MySQL InnoDB COMPAT 行格式")
 
+MySQL InnoDB COMPAT 行格式结构头信息<br />
 ![MySQL InnoDB COMPAT 行格式头信息](https://alpha2016.github.io/img/2019-03-13-mysql-innodb-compact-header.jpg "MySQL InnoDB COMPAT 行格式头信息")
 
+MySQL InnoDB COMPAT 行格式结构头信息说明<br />
 | 名称         | 大小(bit) | 描述                                                         |
 | ------------ | --------- | ------------------------------------------------------------ |
 | 预留位           | 1         | 未知                                                         |
