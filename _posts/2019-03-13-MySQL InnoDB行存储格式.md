@@ -34,7 +34,7 @@ tags:
 如果列的值为768字节或更少，则不使用溢出页，并且可能导致I / O的一些节省，因为该值完全存储在B树节点中。这适用于相对较短的`BLOB`列值，但可能导致B树节点填充数据而不是键值，从而降低其效率。具有许多`BLOB`列的表可能导致B树节点变得太满，并且包含的行太少，使得整个索引的效率低于行较短或列值存储在页外的情况。
 
 #### REDUNDANT 行格式存储特性
-该`REDUNDANT`行格式有如下存储特性：
+`REDUNDANT`行格式有如下存储特性：
 
 - 每个索引记录包含一个6字节的标头。标头用于将连续记录链接在一起，以及用于行级锁定。
 - 聚簇索引中的记录包含所有用户定义列的字段。此外，还有一个6字节的事务ID字段和一个7字节的滚动指针字段。
@@ -47,13 +47,13 @@ tags:
 
 ### COMPACT 行格式
 
-与`COMPACT`行格式相比，行格式减少了大约20％的行存储空间，`REDUNDANT` 代价是增加了某些操作的CPU使用。如果您的工作负载是受缓存命中率和磁盘速度限制的典型工作负载，则`COMPACT`格式可能会更快。如果工作负载受CPU速度限制，则紧凑格式可能会变慢。
+与`REDUNDANT`行格式相比，`COMPACT`行格式减少了大约20％的行存储空间，`REDUNDANT` 代价是增加了某些操作的CPU使用。如果您的工作负载是受缓存命中率和磁盘速度限制的典型工作负载，则`COMPACT`格式可能会更快。如果工作负载受CPU速度限制，则紧凑格式可能会变慢。
 
-该`COMPACT`行的格式是由两个支持 `InnoDB`的文件格式（`Antelope`和`Barracuda`）。有关更多信息，请参见[第14.10节“InnoDB文件格式管理”](https://dev.mysql.com/doc/refman/5.7/en/innodb-file-format.html)。
+`COMPACT`行的格式是由两个支持 `InnoDB`的文件格式（`Antelope`和`Barracuda`）。有关更多信息，请参见[第14.10节“InnoDB文件格式管理”](https://dev.mysql.com/doc/refman/5.7/en/innodb-file-format.html)。
 
-使用`COMPACT`行格式的表将可变长度列值（[`VARCHAR`](https://dev.mysql.com/doc/refman/5.7/en/char.html)， [`VARBINARY`](https://dev.mysql.com/doc/refman/5.7/en/binary-varbinary.html)和， [`BLOB`](https://dev.mysql.com/doc/refman/5.7/en/blob.html)和 [`TEXT`](https://dev.mysql.com/doc/refman/5.7/en/blob.html)类型）的前768个字节存储在[B树](https://dev.mysql.com/doc/refman/5.7/en/glossary.html#glos_b_tree)节点内的索引记录中，其余部分存储在溢出页面上。大于或等于768字节的固定长度列被编码为可变长度列，可以在页外存储。例如， `CHAR(255)`如果字符集的最大字节长度大于3，则列可以超过768字节`utf8mb4`。
+使用`COMPACT`行格式的表将可变长度列值（[`VARCHAR`](https://dev.mysql.com/doc/refman/5.7/en/char.html)， [`VARBINARY`](https://dev.mysql.com/doc/refman/5.7/en/binary-varbinary.html)和， [`BLOB`](https://dev.mysql.com/doc/refman/5.7/en/blob.html)和 [`TEXT`](https://dev.mysql.com/doc/refman/5.7/en/blob.html)类型）的前768个字节存储在[B树](https://dev.mysql.com/doc/refman/5.7/en/glossary.html#glos_b_tree)节点内的索引记录中，其余部分存储在溢出页面上。大于或等于768字节的固定长度列被编码为可变长度列，可以在页外存储。例如，`CHAR(255)`如果字符集的最大字节长度大于3，如果列是 `utf8mb4` 字符类型时可以超过768字节。
 
-如果列的值为768字节或更少，则不使用溢出页，并且可能导致I / O的一些节省，因为该值完全存储在B树节点中。这适用于相对较短的`BLOB`列值，但可能导致B树节点填充数据而不是键值，从而降低其效率。具有许多`BLOB`列的表可能导致B树节点变得太满，并且包含的行太少，使得整个索引的效率低于行较短或列值存储在页外的情况。
+如果列的值为768字节或更少，则不使用溢出页，并且可能导致 I/O 的一些节省，因为该值完全存储在B树节点中。这适用于相对较短的`BLOB`列值，但可能导致B树节点填充数据而不是键值，从而降低其效率。具有许多`BLOB`列的表可能导致B树节点变得太满，并且包含的行太少，使得整个索引的效率低于行较短或列值存储在页外的情况。
 
 #### COMPACT 行格式存储特性
 
@@ -84,7 +84,7 @@ tags:
 ##### COMPACT 行格式存储特性图解
 ![MySQL InnoDB COMPAT 行格式结构](https://alpha2016.github.io/img/2019-03-13-mysql-innodb-compact-format.jpg "MySQL InnoDB COMPAT 行格式")
 
-![MySQL InnoDB COMPAT 行格式头信息](2019-03-13-mysql-innodb-compact-header.jpg "MySQL InnoDB COMPAT 行格式头信息")
+![MySQL InnoDB COMPAT 行格式头信息](https://alpha2016.github.io/img/2019-03-13-mysql-innodb-compact-header.jpg "MySQL InnoDB COMPAT 行格式头信息")
 
 | 名称         | 大小(bit) | 描述                                                         |
 | ------------ | --------- | ------------------------------------------------------------ |
