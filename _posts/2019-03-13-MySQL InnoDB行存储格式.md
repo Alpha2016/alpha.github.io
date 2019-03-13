@@ -147,5 +147,6 @@ Barracuda文件格式支持 `COMPRESSED`行格式。请参见 [第14.10节“Inn
 参考链接：
 1. [MySQL InnoDB row format docs](https://dev.mysql.com/doc/refman/5.7/en/innodb-row-format.html "MySQL InnoDB 行格式文档")
 2. [掘金小册](https://juejin.im/book/5bffcbc9f265da614b11b731 "小孩子的小册")
+3. [InnoDB 行记录格式](http://zhongmingmao.me/2017/05/07/innodb-table-row-format/ "zhongmingmao博客文章")
 
 > 文章当作笔记，版权为小册作者及 MySQL 官方文档
