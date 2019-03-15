@@ -13,7 +13,7 @@ tags:
     - Redis List
     - 消息推送
 ---
-> 2019.03.15 修正，请参见 [新文章]()
+> 2019.03.15 修正，请参见 [新文章](https://alpha2016.github.io/2019/03/15/Swoole-task%E8%AF%B4%E6%98%8E%E5%8F%8A%E7%BB%93%E5%90%88Redis%E8%BF%9E%E6%8E%A5%E6%B1%A0%E5%AE%9E%E7%8E%B0%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/)
 
 > 测试swoole版本为 4.2.13，旧版本 swoole 可能不兼容
 

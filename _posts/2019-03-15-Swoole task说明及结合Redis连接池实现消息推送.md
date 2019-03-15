@@ -20,7 +20,7 @@ task 文档中有此说明：<br />
 未指定目标 Task 进程，调用 task 方法会判断 Task 进程的忙闲状态，底层只会向处于空闲状态的 Task 进程投递任务。如果所有 Task 进程均处于忙的状态，底层会轮询投递任务到各个进程。可以使用 server->stats 方法获取当前正在排队的任务数量。<br />
 task 操作的次数必须小于 onTask 处理速度，如果投递容量超过处理能力，task会塞满缓存区，导致worker进程发生阻塞。worker 进程将无法接收新的请求。<br />
 
-这两个意味着用 task 去 brpop redis list，会阻塞 task，新的任务只能被动等待处理，这相当于把同时处理的任务压制到很低了，基本不可用。task 处理较耗时但并发小的问题还算不错，他的实现是 `task底层使用Unix Socket管道通信，是全内存的，没有IO消耗。单进程读写性能可达100万/s，不同的进程使用不同的管道通信，可以最大化利用多核。`，性能非常高。
+这两个意味着用 task 去 brpop redis list，会阻塞 task，新的任务只能被动等待处理，这相当于把同时处理的任务压制到很低了，基本不可用。task 处理较耗时但并发小的问题还算不错，他的实现是 `task底层使用Unix Socket管道通信，是全内存的，没有IO消耗。单进程读写性能可达100万/s，不同的进程使用不同的管道通信，可以最大化利用多核`，性能非常高。
 
 额外说明：<br />
 **缓存区中的Task数据，在重启进程后会丢失吗？？**<br />
@@ -99,6 +99,7 @@ $server->on('workerExit', function (swoole_http_server $server) use ($pool) {
 $server->on('open', function ($server, $request) use ($pool) {
     $userId = $request->get['user_id'];
     // redis 连接池
+    
     $redis = $pool->get();
     
     if ($redis === false) {
@@ -110,11 +111,13 @@ $server->on('open', function ($server, $request) use ($pool) {
     echo $list;
     while (true) {
         // brpop 第二个参数 50 表示超时（阻塞等待）时间, blpop 同理，详情建议读文档,对应的 redis 操作是 rpush/lpush key content
+        
         if (($message = $redis->brpop($list, 50)) === null) {
             sleep(1);
             continue;
         }
         // var_dump($message); // 结果为数组
+        
         $server->push($request->fd, 'redis 的 ' . $message[0] . ' 队列发送消息:' . $message[1]);
     }
 
@@ -156,11 +159,13 @@ class RedisPool
     public function get()
     {
         //有空闲连接且连接池处于可用状态
+        
         if ($this->available && count($this->pool) > 0) {
             return $this->pool->pop();
         }
 
         //无空闲连接，创建新连接
+        
         $redis = new Swoole\Coroutine\Redis();
         $res = $redis->connect('127.0.0.1', 6379);
         if ($res == false) {
@@ -173,6 +178,7 @@ class RedisPool
     public function destruct()
     {
         // 连接池销毁, 置不可用状态, 防止新的客户端进入常驻连接池, 导致服务器无法平滑退出
+        
         $this->available = false;
         while (!$this->pool->isEmpty()) {
             $this->pool->pop();
