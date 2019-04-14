@@ -27,7 +27,7 @@ tags:
     <script type="text/javascript">
         if(window.WebSocket){
             // 端口和ip地址对应不要写错
-            
+
             var login = function () {
                 var name = document.getElementById('name').value;
                 var data = new FormData();
@@ -141,4 +141,4 @@ $server->on('close', function ($server, $fd) {
 $server->start();
 ```
 
-© 原创文章，如遇到问题可以怜惜邮箱：Limbo0720@outlook.com
+© 原创文章，如遇到问题可以联系邮箱：Limbo0720@outlook.com
