@@ -71,6 +71,7 @@ tags:
 
 *swoole.php*
 ```php
+<?php
 $server = new swoole_websocket_server("0.0.0.0", 9502);
 
 $server->on('workerStart', function ($server, $workerId) {
