@@ -104,6 +104,7 @@ class MysqlPool
 }
 
 // 测试部分
+
 go(function () {
     $pool = new MysqlPool();
     $pool->init();
