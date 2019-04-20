@@ -23,7 +23,7 @@ Runtime::enableCoroutine(true);
 
 class MysqlPool
 {
-	protected $num;
+    protected $num;
     protected $queue;
     
     protected $config = [
@@ -36,21 +36,21 @@ class MysqlPool
     ];
 
 
-	public function __construct($num = 100)
-	{
-		$this->num = $num;
-		$this->queue = new SplQueue();
-	}
+    public function __construct($num = 100)
+    {
+        $this->num = $num;
+        $this->queue = new SplQueue();
+    }
 
 
     /**
      * 初始化
      */
-	public function init()
-	{
-		for ($i = 0; $i < $this->num; $i++) {
-			$this->generate();
-		}
+    public function init()
+    {
+        for ($i = 0; $i < $this->num; $i++) {
+            $this->generate();
+        }
     }
     
 
@@ -77,53 +77,53 @@ class MysqlPool
      * @param integer $timeout
      * 获取连接
      */
-	public function getConnection($timeout = 10)
-	{
-		$time = time();
-		while ($time + $timeout > time()) {
-			try {
-				$connection = $this->queue->pop();
-				break;
-			} catch (Exception $e) {
-				sleep(1);
-			}
-		}
-
-		return $connection;
-	}
+    public function getConnection($timeout = 10)
+    {
+        $time = time();
+        while ($time + $timeout > time()) {
+            try {
+                $connection = $this->queue->pop();
+                break;
+            } catch (Exception $e) {
+                sleep(1);
+            }
+        }
+    
+        return $connection;
+    }
 
 
     /**
      * @param string $connection
      * 释放连接
      */
-	public function free($connection)
-	{
-		$this->queue->push($connection);
-	}
+    public function free($connection)
+    {
+        $this->queue->push($connection);
+    }
 }
 
 // 测试部分
-/*go(function () {
-	$pool = new MysqlPool();
-	$pool->init();
-
-	$num = 200;
-	while ($num-- > 0) {
-		go(function () use ($pool) {
-			$conn = $pool->getConnection();
-			if (!$conn) {
-				echo "get conn error.\n";
-				return;
-			}
-			$statement = $conn->prepare('select * from users where id = ?');
-			$id = mt_rand(0, 10);
-			$result = $statement->execute([$id]);
-			var_dump($result);
-			$pool->free($conn);
-		});
-	}
-});*/
+go(function () {
+    $pool = new MysqlPool();
+    $pool->init();
+    
+    $num = 200;
+    while ($num-- > 0) {
+        go(function () use ($pool) {
+            $conn = $pool->getConnection();
+            if (!$conn) {
+                echo "get conn error.\n";
+                return;
+            }
+            $statement = $conn->prepare('select * from users where id = ?');
+            $id = mt_rand(0, 10);
+            $result = $statement->execute([$id]);
+            var_dump($result);
+            $pool->free($conn);
+        });
+    }
+});
 
 ```
 
