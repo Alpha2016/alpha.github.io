@@ -23,9 +23,10 @@ Runtime::enableCoroutine(true);
 
 class MysqlPool
 {
-    protected $num;
+    protected $min;
+    protected $max;
     protected $queue;
-    
+
     protected $config = [
         'host'     => '127.0.0.1',
         'port'     => 3306,
@@ -36,9 +37,10 @@ class MysqlPool
     ];
 
 
-    public function __construct($num = 100)
+    public function __construct($min = 10, $max = 100)
     {
-        $this->num = $num;
+        $this->min = $min;
+        $this->max = $max;
         $this->queue = new SplQueue();
     }
 
@@ -48,11 +50,11 @@ class MysqlPool
      */
     public function init()
     {
-        for ($i = 0; $i < $this->num; $i++) {
+        for ($i = 0; $i < $this->min; $i++) {
             $this->generate();
         }
     }
-    
+
 
     /**
      * 生成连接
@@ -88,7 +90,7 @@ class MysqlPool
                 sleep(1);
             }
         }
-    
+
         return $connection;
     }
 
@@ -100,6 +102,39 @@ class MysqlPool
     public function free($connection)
     {
         $this->queue->push($connection);
+    }
+
+
+    /**
+     * 维持当前的连接数不断线，并且剔除断线的链接 .
+     */
+    public function keepAlive()
+    {
+        swoole_timer_tick(2000, function() {
+            while ($this->queue->count() > 0 && $next = $this->queue->shift()) {
+                $next->query("select 1" , function($db, $res){
+                    
+                    if ($res === false) {
+                        return;
+                    }
+                    
+                    echo "当前连接数：" . $this->queue->count() . PHP_EOL;
+
+                    $this->queue->push($db);
+                });
+            }
+        });
+
+        swoole_timer_tick(2000 , function() {
+            if($this->queue->count() > $this->max) {
+                while($this->max < $this->queue->count()) {
+                    $next = $this->queue->shift();
+                    $next->close();
+                    
+                    echo "关闭连接..." . PHP_EOL;
+                }
+            }
+        });
     }
 }
 
@@ -130,4 +165,8 @@ go(function () {
 
 取消注释的测试部分代码，然后执行 `php mysqlPool.php` 进行测试，连接池默认的最大连接是 100，测试中是 200 个连接，超出部分将有一个等待过程，为了方便查看数据，可以将这两个数字都调小。
 
+keepAlive 方法可以在 workerStart 事件中调用，直接利用 swoole 的定时器特性轮训，维护连接池状态。
+
 © 原创文章
+
+其他参考：[韩天峰 MySQL连接池](http://rango.swoole.com/archives/265)
