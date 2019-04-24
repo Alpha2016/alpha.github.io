@@ -2,7 +2,7 @@
 layout:     post
 title:      Swoole 极简版MySQL连接池
 subtitle:   Swoole 极简版MySQL连接池
-date:       2019-04-17
+date:       2019-04-20
 author:     he xiaodong
 header-img: img/default-post-bg.jpg
 catalog: true
