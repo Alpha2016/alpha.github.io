@@ -88,9 +88,11 @@ server {
     listen 443 ssl;
     server_name www.domain.com;
     # 其他配置不变
-    
+
     ...
 }
 ```
+
+参考链接：[官方文档](http://nginx.org/en/docs/http/configuring_https_servers.html)
 
 © 原创文章
