@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Nginx 健康检查配置
-subtitle:   Nginx 健康检查配置
+title:      Nginx http运行状况健康检查配置
+subtitle:   Nginx http运行状况健康检查配置
 date:       2019-05-20
 author:     he xiaodong
 header-img: img/default-post-bg.jpg
