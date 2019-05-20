@@ -58,8 +58,7 @@ server {
     }
 }
 ```
-此代码段定义了一个服务器，它将所有请求匹配到 `location /` 传递给调用的上游组 backend。它还使用该 health_check 指令启用高级运行状况监视：默认情况下，NGINX Plus 每五秒向组中的每个服务器发送一个 "/" 请求 backend。如果任何通信错误或发生超时（在服务器返回的状态码超出 200- 399的范围）的健康检查失败。服务器被标记为不健康，并且 NGINX Plus 在再次通过运行状况检查之前不会向其发送客户端请求。
-
+此代码段定义了一个服务器，它将所有请求匹配到 `location /` 传递给调用的上游组 backend。它还使用该 health_check 指令启用高级运行状况监视：默认情况下，NGINX Plus 每五秒向组中的每个服务器发送一个 "/" 请求 backend。如果任何通信错误或发生超时（在服务器返回的状态码超出 200- 399的范围）的健康检查失败。服务器被标记为不健康，并且 NGINX Plus 在再次通过运行状况检查之前不会向其发送客户端请求。<br />
 另一个可选项：您可以指定另一个用于运行状况检查的端口，例如，用于监视同一主机上的许多服务的运行状况。使用指令的 port 参数指定新端口 health_check：
 ```nginx
 server {
@@ -112,8 +111,10 @@ location / {
 ```nginx
 http {
     #...
+
     match server_ok {
         # tests are here
+        
     }
 }
 ```
@@ -121,12 +122,14 @@ http {
 ```nginx
 http {
     #...
+
     match server_ok {
         status 200-399;
         body !~ "maintenance mode";
     }
     server {
         #...
+        
         location / {
             proxy_pass http://backend;
             health_check match=server_ok;
