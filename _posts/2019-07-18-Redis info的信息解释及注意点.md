@@ -15,7 +15,7 @@ tags:
 Info是获取单机信息的命令，主要是9 块的信息，也可以单独使用 info server 这样的命令来获取部分信息，一下为 info (all) 的结果：
 
 ##### Server(服务器信息)
-```conf
+```ini
 redis_version:3.0.0                             #redis服务器版本
 redis_git_sha1:00000000                 #Git SHA1
 redis_git_dirty:0                                   #Git dirtyflag
