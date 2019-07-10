@@ -15,6 +15,7 @@ tags:
 Info是获取单机信息的命令，主要是9 块的信息，也可以单独使用 info server 这样的命令来获取部分信息，一下为 info (all) 的结果：
 
 ##### Server(服务器信息)
+```conf
 redis_version:3.0.0                             #redis服务器版本
 redis_git_sha1:00000000                 #Git SHA1
 redis_git_dirty:0                                   #Git dirtyflag
@@ -32,14 +33,18 @@ uptime_in_days:302                   #redis服务器启动总�
 hz:10                               #redis内部调度（进行关闭timeout的客户端，删除过期key等等）频率，程序规定serverCron每秒运行10次。
 lru_clock:14359959      #自增的时钟，用于LRU管理,该时钟100ms(hz=10,因此每1000ms/10=100ms执行一次定时任务)更新一次。
 config_file:/redis_cluster/etc/9021.conf  #配置文件路径
+```
 
 ##### Clients(已连接客户端信息)
+```conf
 connected_clients:1081       #已连接客户端的数量(不包括通过slave连接的客户端)
 client_longest_output_list:0 #当前连接的客户端当中，最长的输出列表，用clientlist命令观察omem字段最大值
 client_biggest_input_buf:0   #当前连接的客户端当中，最大输入缓存，用clientlist命令观察qbuf和qbuf-free两个字段最大值
 blocked_clients:0                  #正在等待阻塞命令(BLPOP、BRPOP、BRPOPLPUSH)的客户端的数量
+```
 
 ##### Memory(内存信息)
+```conf
 used_memory:327494024                 #由redis分配器分配的内存总量，以字节为单位
 used_memory_human:312.32M       #以人类可读的格式返回redis分配的内存总量
 used_memory_rss:587247616         #从操作系统的角度，返回redis已分配的内存总量(俗称常驻集大小)。这个值和top命令的输出一致
@@ -48,8 +53,10 @@ used_memory_peak_human:1.74G #以人类可读的格式返回redis的内存消耗
 used_memory_lua:35840                  #lua引擎所使用的内存大小(以字节为单位)
 mem_fragmentation_ratio:1.79          #used_memory_rss和used_memory之间的比率，小于1表示使用了swap，大于1表示碎片比较多
 mem_allocator:jemalloc-3.6.0            #在编译时指定的redis所使用的内存分配器。可以是libc、jemalloc或者tcmalloc
+```
 
 ##### Persistence(rdb和aof的持久化相关信息)
+```conf
 loading:0                                                  #服务器是否正在载入持久化文件
 rdb_changes_since_last_save:28900855 #离最近一次成功生成rdb文件，写入命令的个数，即有多少个写入命令没有持久化
 rdb_bgsave_in_progress:0                 #服务器是否正在创建rdb文件
@@ -74,8 +81,10 @@ aof_buffer_length:0                            #aof b
 aof_rewrite_buffer_length:0             #aof rewrite buffer的大小
 aof_pending_bio_fsync:0                 #后台I/O队列里面，等待执行的fsync调用数量
 aof_delayed_fsync:0                         #被延迟的fsync调用数量
+```
 
 ##### Stats(一般统计信息)
+```conf
 total_connections_received:209561105 #新创建连接个数,如果新创建连接过多，过度地创建和销毁连接对性能有影响，说明短连接严重或连接池使用有问题，需调研代码的连接设置
 total_commands_processed:2220123478  #redis处理的命令数
 instantaneous_ops_per_sec:279                 #redis当前的qps，redis内部较实时的每秒执行的命令数
@@ -95,8 +104,10 @@ pubsub_channels:0                                
 pubsub_patterns:0                                       #当前使用的模式的数量
 latest_fork_usec:15679                                #最近一次fork操作阻塞redis进程的耗时数，单位微秒
 migrate_cached_sockets:0                         #
+```
 
 ##### Replication(主从信息，master上显示的信息)
+```conf
 role:master                              #实例的角色，是masteror slave
 connected_slaves:1              #连接的slave实例个数
 slave0:ip=192.168.64.104,port=9021,state=online,offset=6713173004,lag=0 #lag从库多少秒未向主库发送REPLCONF命令
@@ -105,8 +116,10 @@ repl_backlog_active:1                  #复制积压缓冲区�
 repl_backlog_size:134217728    #复制积压缓冲大小
 repl_backlog_first_byte_offset:6578955418  #复制缓冲区里偏移量的大小
 repl_backlog_histlen:134217728   #此值等于master_repl_offset - repl_backlog_first_byte_offset,该值不会超过repl_backlog_size的大小
+```
 
 ##### Replication(主从信息，slave上显示的信息)
+```conf
 role:slave                                       #实例的角色，是master or slave
 master_host:192.168.64.102       #此节点对应的master的ip
 master_port:9021                         #此节点对应的master的port
@@ -122,8 +135,10 @@ repl_backlog_active:0                 #复制积压缓冲区是�
 repl_backlog_size:134217728   #复制积压缓冲大小
 repl_backlog_first_byte_offset:0 #复制缓冲区里偏移量的大小
 repl_backlog_histlen:0           #此值等于 master_repl_offset - repl_backlog_first_byte_offset,该值不会超过repl_backlog_size的大小
+```
 
 ##### CPU(CPU计算量统计信息)
+```conf
 used_cpu_sys:96894.66             #将所有redis主进程在核心态所占用的CPU时求和累计起来
 used_cpu_user:87397.39           #将所有redis主进程在用户态所占用的CPU时求和累计起来
 used_cpu_sys_children:6.37     #将后台进程在核心态所占用的CPU时求和累计起来
@@ -133,12 +148,17 @@ used_cpu_user_children:52.83 #将后台进程在用户态所占用的CPU时求�
 cmdstat_get:calls=1664657469,usec=8266063320,usec_per_call=4.97  
 
 **call每个命令执行次数,usec总共消耗的CPU时长(单位微秒),平均每次消耗的CPU时长(单位微秒)**
+```
 
 ##### Cluster(集群相关信息)
+```conf
 cluster_enabled:1   #实例是否启用集群模式
+```
 
 ##### Keyspace(数据库相关的统计信息)
+```conf
 db0:keys=194690,expires=191702,avg_ttl=3607772262 #db0的key的数量,以及带有生存期的key的数,平均存活时间
+```
 
 以上信息链接：[csdn 文章](https://blog.csdn.net/mysqldba23/article/details/68066322)
 
