@@ -141,4 +141,4 @@ $server->on('close', function ($server, $fd) {
 $server->start();
 ```
 
-© 原创文章，如遇到问题可以联系邮箱：Limbo0720@outlook.com
+© 原创文章，如遇到问题可以联系邮箱：hexiaodong1992@outlook.com
