@@ -3,12 +3,12 @@ title: alpha 的博客
 SEOTitle: 何晓东的博客 | alpha blog
 header-img: img/post-bg-desk.jpg
 email: hexiaodong1992@outlook.com
-description: "滑稽点,何晓东博客,php,mysql,linux"
-keyword: "PHP,MySQL,Linux"
+description: "滑稽点,何晓东博客,php,mysql,linux,go"
+keyword: "PHP,MySQL,Linux,Go,Education"
 url: "http://alpha2016.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/alpha2016/alpha.github.io.git" # you code repository
-tags: ["Windows10", "PHP", "滑稽"]
+tags: ["Windows10", "PHP", "Go", "专注教育领域"]
 
 
 # Sidebar settings
