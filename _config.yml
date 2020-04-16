@@ -89,6 +89,10 @@ friends: [
     {
       title: "elarity sf专栏",
       href: "https://segmentfault.com/blog/elarity"
+    },
+    {
+      "title": "Y!an's Blog",
+      "href": "https://yian.me/blog/"
     }
 ]
 
