@@ -71,6 +71,8 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
+# 百度统计
+ba_track_id: 83e259f69b37d02a4633a2b7d960139c
 
 # Friends
 friends: [
