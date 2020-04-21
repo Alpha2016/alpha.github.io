@@ -72,7 +72,7 @@ chrome-tab-theme-color: "#000000"
 service-worker: true
 
 # 百度统计
-ba_track_id: 83e259f69b37d02a4633a2b7d960139c
+ba_track_id: 2078c58d3130c27acca4f4c9fc4d92e3
 
 # Friends
 friends: [
