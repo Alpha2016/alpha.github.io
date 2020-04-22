@@ -74,6 +74,10 @@ service-worker: true
 # 百度统计
 ba_track_id: 2078c58d3130c27acca4f4c9fc4d92e3
 
+# Google Analytics
+ga_track_id: 'UA-164218028-1'            # Format: UA-xxxxxx-xx
+ga_domain: auto
+
 # Friends
 friends: [
     {
