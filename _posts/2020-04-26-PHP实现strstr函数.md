@@ -16,30 +16,27 @@ tags:
 
 **PHP 实现**：
 ```php
-function strstr2($str, $search) {
-    $count = strlen($str);
-    $tmpLength = 0;
-    $tmp = [];
-    $i = 0;
-    while ($i < $count) {
-        // 未找到置为初始值
-        if ($str[$i] !== $search[$tmpLength]) {
-            $tmp = [];
-            $tmpLength = 0;
-            if ($i === $count - 1) {
-                return -1;
-            }
-        } else {
-            // 找到匹配元素，继续执行
-            $tmp[$tmpLength] = $str[$i];
-            if (!isset($search[$tmpLength + 1])) {
-                return $i - $tmpLength;  // 位置
-                return $tmp;             // 结果集
-            }
-            $tmpLength++;
+public function strStr(string $haystack, string $needle): int
+    {
+        if (0 === ($lengthOfNeedle = strlen($needle))) {
+            return 0;
         }
-        $i++;
+
+        $lengthOfHaystack = strlen($haystack);
+        $diffLength = $lengthOfHaystack - $lengthOfNeedle;
+
+        for ($i = 0, $j = 0, $k = 0; $i <= $diffLength; $i++, $j = 0, $k = $i) {
+            while ($k < $lengthOfHaystack && $j < $lengthOfNeedle && $haystack[$k] === $needle[$j]) {
+                $k++;
+                $j++;
+            }
+
+            if ($j === $lengthOfNeedle) {
+                return $k - $j;
+            }
+        }
+
+        return -1;
     }
-}
-echo substr2('hello', 'll'); // output: 2
+echo strStr('hello', 'll'); // output: 2
 ```
