@@ -53,5 +53,6 @@ http {
 
 此外，默认情况下，在 60 秒内未传送任何数据的链接将被关闭，时间可以使用 `proxy_read_timeout` 指令来延长。或者代理服务器可以配置定时发送 ping 帧来重置超时及检查链接是否可用。
 
+顺带推荐 [质量很高的课程](https://hxd.best/2021/04/01/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E6%95%99%E7%A8%8B-%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4%E4%B8%93%E6%A0%8F/)， 欢迎扫码购买
 
 参考链接： [Nginx Websocket proxying](http://nginx.org/en/docs/http/websocket.html)

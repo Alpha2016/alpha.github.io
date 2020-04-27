@@ -59,5 +59,6 @@ PubSub 是一种即发即弃的模式，生产者传递过来一个消息，Redi
  
 简单总结是：在额外的 `set` 中记录所有订阅者，并创建以订阅者 id 为 key 的`list` 数据结构，发布者将每一条消息发布成功之后，记录进订阅者 ID 为 key 的`value` 中，订阅者消费成功消息后，删除此消息，此外订阅者断线重连的情况下，读取并消费自身 ID 为 key 的 list 的数据，然后再重新订阅发布者，这样保证数据顺序不会乱，也能保证消息被存储和正确消费。
 
+顺带推荐 [质量很高的课程](https://hxd.best/2021/04/01/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E6%95%99%E7%A8%8B-%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4%E4%B8%93%E6%A0%8F/)， 欢迎扫码购买
 
 部分内容参考自：[cnblog 文章](http://www.cnblogs.com/shihaiming/p/6054192.html?utm_source=itdadao&utm_medium=referral) 及 掘金小册 Redis 深度历险 作者：老钱
