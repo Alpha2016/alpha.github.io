@@ -45,5 +45,5 @@ tags:
 
 参考链接：
 1. [mysql doc truncate table](https://dev.mysql.com/doc/refman/8.0/en/truncate-table.html)
-1. [mysql doc drop table](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)
+2. [mysql doc drop table](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)
 3. [Difference Between TRUNCATE, DELETE, And DROP In SQL Server](https://www.c-sharpcorner.com/blogs/difference-between-truncate-delete-and-drop-in-sql-server1)
