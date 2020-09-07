@@ -70,7 +70,7 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
-root:.
+root: .
 
 # 百度统计
 ba_track_id: 2078c58d3130c27acca4f4c9fc4d92e3
