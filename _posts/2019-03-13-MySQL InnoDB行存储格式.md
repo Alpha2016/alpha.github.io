@@ -150,3 +150,6 @@ Barracuda文件格式支持 `COMPRESSED`行格式。请参见 [第14.10节“Inn
 3. [InnoDB 行记录格式](http://zhongmingmao.me/2017/05/07/innodb-table-row-format/ "zhongmingmao博客文章")
 
 > 文章当作笔记，版权为小册作者及 MySQL 官方文档
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

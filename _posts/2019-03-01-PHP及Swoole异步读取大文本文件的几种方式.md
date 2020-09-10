@@ -102,3 +102,6 @@ swoole_async_read("aaa.sql", function($fileName, $content) use ($begin) {
 参考链接：
 1. [elarilty 文章](https://segmentfault.com/a/1190000017205171 "elarilty 文章")
 2. [Swoole 文档](https://wiki.swoole.com/wiki/page/188.html "Swoole 文档")
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

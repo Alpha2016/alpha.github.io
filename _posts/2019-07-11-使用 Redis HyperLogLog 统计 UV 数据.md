@@ -32,4 +32,5 @@ pfmerge activity-page-all activity-page1acvitipage2 …
 
 更多文章：https://blog.csdn.net/heiyeshuwu/article/details/41248379
 
--> [赏作者一杯咖啡](http://hxd.best/reward.html)
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

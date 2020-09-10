@@ -194,3 +194,6 @@ class RedisPool
 1. [Swoole task 文档](https://wiki.swoole.com/wiki/page/134.html "Swoole task文档")
 2. [Swoole 在多个协程间使用协程客户端](https://wiki.swoole.com/wiki/page/852.html "Swoole 在多个协程间使用协程客户端")
 3. [task_ipc_mode 文档](https://wiki.swoole.com/wiki/page/296.html "task_ipc_mode 文档")
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

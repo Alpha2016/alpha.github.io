@@ -172,3 +172,6 @@ keepAlive 方法可以在 workerStart 事件中调用，直接利用 swoole 的�
 其他参考：
 1. [韩天峰 MySQL连接池](http://rango.swoole.com/archives/265)
 2. [Swoole MySQL连接池文档](https://wiki.swoole.com/wiki/page/350.html)
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

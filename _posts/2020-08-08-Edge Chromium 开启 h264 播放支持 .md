@@ -18,3 +18,6 @@ tags:
 在 edge 地址栏输入 `edge://flags` ，然后搜索 video, 找到 `Hardware-accelerated video decode`, `Hardware-accelerated video encode` 两个选项，设置成 enable，重启浏览器就可以支持 h264 编码的视频播放了。
 
 **chrome 始终不支持**
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

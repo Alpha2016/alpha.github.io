@@ -78,3 +78,6 @@ return strStr2('asissisap', 'is'); // output: 2
 ```
 
 参考文章： [让我们一起啃算法---- 实现 strStr](https://learnku.com/articles/43524)
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

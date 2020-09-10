@@ -157,3 +157,6 @@ slowlog = log/$pool.log.slow #日志文件
 3. [A better way to run PHP-FPM](https://ma.ttias.be/a-better-way-to-run-php-fpm/ "A better way to run PHP-FPM")
 4. [PHP-fpm 配置官方文档](http://php.net/manual/zh/install.fpm.configuration.php "PHP-fpm 配置官方文档")
 5. [看云文章 php-fpm 与 NGINX 优化总结](https://www.kancloud.cn/digest/php-src/136260 "php-fpm 与 NGINX 优化总结")
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

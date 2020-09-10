@@ -134,3 +134,6 @@ nginx 中的反向代理实现包括频内（或被动）服务器运行状况�
 以下文章更详细地描述了与NGINX Plus的负载平衡：
 - [使用NGINX和NGINX Plus进行负载均衡](https://www.nginx.com/blog/load-balancing-with-nginx-plus/)
 - [使用NGINX和NGINX Plus第2部分进行负载均衡](https://www.nginx.com/blog/load-balancing-with-nginx-plus-part2/)
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

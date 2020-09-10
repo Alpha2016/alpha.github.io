@@ -47,3 +47,6 @@ tags:
 1. [mysql doc truncate table](https://dev.mysql.com/doc/refman/8.0/en/truncate-table.html)
 2. [mysql doc drop table](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)
 3. [Difference Between TRUNCATE, DELETE, And DROP In SQL Server](https://www.c-sharpcorner.com/blogs/difference-between-truncate-delete-and-drop-in-sql-server1)
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

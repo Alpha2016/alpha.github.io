@@ -131,3 +131,6 @@ $server->start();
 2. [memory 文章](https://www.im050.com/posts/380 "memory swoole task 文章")
 
 **期间 memory 博客作者及其他大佬提供了思路，才得以完成，特此感谢，©原创文章**
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

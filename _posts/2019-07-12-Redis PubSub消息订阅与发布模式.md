@@ -61,4 +61,7 @@ PubSub 是一种即发即弃的模式，生产者传递过来一个消息，Redi
 
 顺带推荐 [质量很高的课程](https://hxd.best/2021/04/01/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E6%95%99%E7%A8%8B-%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4%E4%B8%93%E6%A0%8F/)， 欢迎扫码购买
 
-部分内容参考自：[cnblog 文章](http://www.cnblogs.com/shihaiming/p/6054192.html?utm_source=itdadao&utm_medium=referral) 及 掘金小册 Redis 深度历险 作者：老钱  -> [赏作者一杯咖啡](http://hxd.best/reward.html)
+部分内容参考自：[cnblog 文章](http://www.cnblogs.com/shihaiming/p/6054192.html?utm_source=itdadao&utm_medium=referral) 及 掘金小册 Redis 深度历险 作者：老钱
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

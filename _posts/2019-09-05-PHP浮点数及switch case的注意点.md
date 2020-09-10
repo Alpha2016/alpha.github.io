@@ -56,3 +56,6 @@ switch($a){
 弱类型的特性，0 == false, 则最终结果为 2；
 
 © 原创文章
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

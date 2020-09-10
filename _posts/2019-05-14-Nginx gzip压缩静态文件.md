@@ -49,3 +49,6 @@ gzip_disable 对某种指定的浏览器类型不启用压缩，M$ie6以下肯�
 使用 Nginx 只是其中一种压缩静态资源的方式，除此之外，可以使用 gulp 等方式压缩前端资源，提前压缩，直接使用压缩后的资源，减少消耗。如果高流量访问的大型网站，直接静态资源 CDN 化是最好的选择，具体根据团队和项目情况来选择方案。
 
 参考链接：[Nginx gzip module文档](https://github.com/DocsHome/nginx-docs/blob/master/%E6%A8%A1%E5%9D%97%E5%8F%82%E8%80%83/http/ngx_http_gzip_module.md)
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

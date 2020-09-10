@@ -30,3 +30,6 @@ tags:
 1. [CSDN 文章 多线程之Master-Worker工作模式学习](https://blog.csdn.net/a347911/article/details/53421102 "多线程之Master-Worker工作模式学习")
 2. [掘金文章 理解JAVA线程池](https://juejin.im/entry/58fada5d570c350058d3aaad "深入理解JAVA线程池") 
 3. [sf文章 理解和使用线程池](https://segmentfault.com/a/1190000015808897 "理解和使用线程池") 
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

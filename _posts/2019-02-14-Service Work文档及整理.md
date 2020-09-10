@@ -37,3 +37,6 @@ Service Worker 生命周期为：
 2. [Google developer doc](https://developers.google.com/web/fundamentals/primers/service-workers/ "Service Worker")
 3. [掘金文章](https://juejin.im/post/5b06a7b3f265da0dd8567513 "Service Worker")
 4. [Laras 百度实践教程](https://lavas.baidu.com/pwa/offline-and-cache-loading/service-worker/service-worker-debug "Service Worker")
+
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)

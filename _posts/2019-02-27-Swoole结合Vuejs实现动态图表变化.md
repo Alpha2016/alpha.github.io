@@ -123,5 +123,6 @@ $server->start();
 
 执行过程如常：`php swoole-charts.php` 启动服务，开始监听 redis 的 data 队列，然后用户访问到 `http://localhost/swoole-charts.html` 页面，最开始加载在页面中的数据，然后新起终端，输入 `redis-cli` 打开 redis，`rpush data '{"日期":"1月7日","销售额":358}'` ... 等，新增的数据推送到 data 队列，然后 swoole 负责读取和推送，vuejs 负责根据数据变化，动态渲染图表
 
-**©原创文章，如有帮助，多谢打赏**
-![支付宝](https://alpha2016.github.io/img/alipay.jpg "支付宝帐号")
+**©原创文章**
+
+最后恰饭 [阿里云全系列产品/短信包特惠购买 中小企业上云最佳选择 阿里云内部优惠券](https://www.aliyun.com/minisite/goods?userCode=0amqgcs9)
