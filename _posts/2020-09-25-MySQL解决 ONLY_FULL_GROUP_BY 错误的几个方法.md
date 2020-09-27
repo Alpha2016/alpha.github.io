@@ -50,6 +50,8 @@ is incompatible with sql_mode=only_full_group_by
 SELECT ANY_VALUE(name), MAX(age) FROM t;
 ```
 
+**官方文档提示：如果您根本不在乎为每个组选择未聚合列的哪个值，则这可能很有用。与 `SUM()` 或 `COUNT()` 之类的函数不同，`ANY_VALUE()` 不是聚合函数。它只是起到抑制不确定性测试的作用。**
+
 参考链接： [MySQL Handling of GROUP BY](https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html)
 
 
