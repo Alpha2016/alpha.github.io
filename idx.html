@@ -119,7 +119,7 @@
 
     function dsearch() {
         content = document.getElementById('content').value;
-        url = 'https://www.dogedoge.com/results?q=' + content;
+        url = 'https://www.baidu.com/s?wd=' + content;
         window.open(url);
     }
 </script>
@@ -143,7 +143,7 @@
             var e = e || event,
             keycode = e.which || e.keyCode;
             if (keycode == 13) {
-                $("#gsearch").trigger("click");
+                $("#bsearch").trigger("click");
             }
         });
     });
@@ -160,7 +160,7 @@
                 <input type="text" id="content" style="width:60%;" class="form-control col-sm-8 col-xs-6">
                 &nbsp;&nbsp;
                 <input type="button" value="Google Search" onclick="gsearch()" id ="gsearch" class="btn btn-success col-sm-2 col-xs-3" />
-                <input type="button" value="Doge 搜索" onclick="dsearch()" id="bsearch" class="btn btn-primary col-sm-2 col-xs-3" style="margin-left:20px;"/>
+                <input type="button" value="Baidu 搜索" onclick="dsearch()" id="bsearch" class="btn btn-primary col-sm-2 col-xs-3" style="margin-left:20px;"/>
             </div>
         </div><br />
 
